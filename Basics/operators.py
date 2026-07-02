@@ -124,4 +124,11 @@ print(6 & 3) # Bitwise AND
 print(6 | 3) # Bitwise OR
 print(6 ^ 3) # Bitwise XOR
  
+# Ternery Operator
+num = 4
+x = "Weekend!" if num > 5 else "Workday"
+print(x)
 
+num = 6
+x = "Fri" if num == 5 else "Sat" if num == 6 else "Sun" if num == 7 else "Workday"
+print(x)
