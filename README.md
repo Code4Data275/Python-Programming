@@ -302,7 +302,10 @@ You can convert from one type to another with the int(), float(), and complex() 
             - ~ (NOT): Inverts all the bits
             - >> (Signed right shift): Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
             - << (Zero right shift): Shift left by pushing zeros in from the right and let the leftmost bits fall off
-            
+    8. Ternery Operator:
+        - The ternary operator allows one value if a condition is true, and another if it is false.
+        - The ternary operator can be used instead of elif in longer if statements.
+        
 
 
 
