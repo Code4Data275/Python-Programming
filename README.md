@@ -305,8 +305,105 @@ You can convert from one type to another with the int(), float(), and complex() 
     8. Ternery Operator:
         - The ternary operator allows one value if a condition is true, and another if it is false.
         - The ternary operator can be used instead of elif in longer if statements.
-        
 
+## Python Lists
+- Lists are used to store multiple items in a single variable.
+- Lists are one of 4 built-in data types in Python used to store collections of data.
+- They are created using square brackets []
+- List items are ordered, changeable, and allow duplicates.
+- List items are indexed,the first item has index [0], the second item has index [1] etc.
+- When we say that lists are ordered, it means that the items have a defined order, and that order will not change.
+- If you add new items to a list, the new items will be placed at the end of the list.
+- The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+- Since lists are indexed, lists can have items with the same value
+- To determine how many items a list has, use the len() function
+- List items can be of any data type
+- A list can contain different data types.
+- From Python's perspective, lists are defined as objects with the data type 'list':
+- It is also possible to use the list() constructor when creating a new list.
 
+    ### Access Items
+    - List items are indexed and you can access them by referring to the index number.
+    - Negative indexing means start from the end. -1 refers to the last item, -2 refers to the second last item etc.
+    - You can specify a range of indexes by specifying where to start and where to end the range.
+    - When specifying a range, the return value will be a new list with the specified items.
+    - By leaving out the start value, the range will start at the first item.
+    - By leaving out the end value, the range will go on to the end of the list.
+    - Specify negative indexes if you want to start the search from the end of the list
+    - To determine if a specified item is present in a list use the in keyword.
 
-    
+    ### Change List Items
+    - To change the value of a specific item, refer to the index number
+    - To change the value of items within a specific range, define a list with the new values, and refer to the range of index numbers where you want to insert the new values
+    - If you insert more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly.
+    - The length of the list will change when the number of items inserted does not match the number of items replaced.
+    - If you insert less items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly.
+    - To insert a new list item, without replacing any of the existing values, we can use the insert() method. The insert() method inserts an item at the specified index
+
+    ### Add List Items
+    - To add an item to the end of the list, use the append() method
+    - To insert a list item at a specified index, use the insert() method. The insert() method inserts an item at the specified index
+    - To append elements from another list to the current list, use the extend() method. The elements will be added to the end of the list.
+    - The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
+
+    ### Remove List Items
+    - The remove() method removes specified item. If there are more than one item with the specified value, the remove() method removes the first occurrence
+    - The pop() method removes the specified index. 
+    - The del keyword also removes the specified index. The del keyword can also delete the list completely.
+    - The clear() method empties the list. The list still remains, but it has no content.
+
+    ### Loop through the List
+    - You can loop through the list items by using a for loop.
+    - You can also loop through the list items by referring to their index number.
+    - You can loop through the list items by using a while loop. Use the len() function to determine the length of the list, then start at 0 and loop your way through the list items by referring to their indexes. Remember to increase the index by 1 after each iteration.
+    - List Comprehension offers the shortest syntax for looping through lists
+
+    ### List Comprehension
+    - List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+    - Example:
+        - Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name.
+        - Without list comprehension you will have to write a for statement with a conditional test inside.
+        - With list comprehension you can do all that with only one line of code
+    - Syntax:
+        newlist = [expression for item in iterable if condition == True]
+    - The return value is a new list, leaving the old list unchanged.
+    - The condition is like a filter that only accepts the items that evaluate to True.
+    - The condition is optional and can be omitted.
+    - The iterable can be any iterable object, like a list, tuple, set etc.
+    - You can use the range() function to create an iterable.
+    - The expression is the current item in the iteration, but it is also the outcome, which you can manipulate before it ends up like a list item in the new list.
+    - You can set the outcome to whatever you like.
+    - The expression can also contain conditions, not like a filter, but as a way to manipulate the outcome.
+
+    ### Sort List
+    - List objects have a sort() method that will sort the list alphanumerically, ascending, by default.
+    - To sort descending, use the keyword argument reverse = True.
+    - You can also customize your own function by using the keyword argument key = function.
+    - The function will return a number that will be used to sort the list (the lowest number first).
+    - By default the sort() method is case sensitive, resulting in all capital letters being sorted before lower case letters.
+    - Luckily we can use built-in functions as key functions when sorting a list. So if you want a case-insensitive sort function, use str.lower as a key function.
+    - What if you want to reverse the order of a list, regardless of the alphabet? The reverse() method reverses the current sorting order of the elements.
+
+    ### Copy a List
+    - You cannot copy a list simply by typing list2 = list1, because list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2.
+    - You can use the built-in List method copy() to copy a list.
+    - Another way to make a copy is to use the built-in method list().
+    - You can also make a copy of a list by using the : (slice) operator.
+
+    ### Join a List
+    - There are several ways to join, or concatenate, two or more lists in Python.
+    - One of the easiest ways are by using the + operator..
+    - Another way to join two lists is by appending all the items from list2 into list1, one by one
+
+    ### List Methods
+    - append(): Adds an element at the end of the list
+    - clear(): Removes all the elements from the list
+    - copy(): Returns a copy of the list
+    - count(): Returns the number of elements with the specified value
+    - extend(): Add the elements of a list (or any iterable), to the end of the current list
+    - index(): Returns the index of the first element with the specified value
+    - insert(): Adds an element at the specified position
+    - pop(): Removes the element at the specified position
+    - remove(): Removes the item with the specified value
+    - reverse(): Reverses the order of the list
+    - sort(): Sorts the list
