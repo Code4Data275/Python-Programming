@@ -407,3 +407,56 @@ You can convert from one type to another with the int(), float(), and complex() 
     - remove(): Removes the item with the specified value
     - reverse(): Reverses the order of the list
     - sort(): Sorts the list
+
+## Python Tuples
+- Tuples are used to store multiple items in a single variable.
+- A tuple is a collection which is ordered and unchangeable.
+- Tuples are written with round brackets.
+- Tuple items are ordered, unchangeable, and allow duplicate values.
+- Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+- When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.
+- Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
+- Since tuples are indexed, they can have items with the same value.
+- To determine how many items a tuple has, use the len() function.
+- To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
+- Tuple items can be of any data type.
+- From Python's perspective, tuples are defined as objects with the data type 'tuple'
+- It is also possible to use the tuple() constructor to make a tuple.
+
+### Access Tuples 
+- You can access tuple items by referring to the index number, inside square brackets
+- The first item has index 0.
+- Negative indexing means start from the end.
+- -1 refers to the last item, -2 refers to the second last item etc.
+- You can specify a range of indexes by specifying where to start and where to end the range. When specifying a range, the return value will be a new tuple with the specified items.
+- By leaving out the start value, the range will start at the first item.
+- By leaving out the end value, the range will go on to the end of the tuple
+- Specify negative indexes if you want to start the search from the end of the tuple
+
+### Update Tuples
+- Tuples are unchangeable, meaning that you cannot change, add, or remove items once the tuple is created. But there are some workarounds.
+- Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable as it also is called. But there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.
+- Since tuples are immutable, they do not have a built-in append() method, but there are other ways to add items to a tuple:
+    - Convert into a list: Just like the workaround for changing a tuple, you can convert it into a list, add your items, and convert it back into a tuple.
+    -  Add tuple to a tuple. You are allowed to add tuples to tuples, so if you want to add one item, (or many), create a new tuple with the item(s), and add it to the existing tuple:
+    - Tuples are unchangeable, so you cannot remove items from it, but you can use the same workaround as we used for changing and adding tuple items
+
+### Unpack Tuples
+- When we create a tuple, we normally assign values to it. This is called "packing" a tuple.
+- But, in Python, we are also allowed to extract the values back into variables. This is called "unpacking"
+- If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list.
+- If the asterisk is added to another variable name than the last, Python will assign values to the variable until the number of values left matches the number of variables left.
+
+### Loop Tuples
+- You can loop through the tuple items by using a for loop.
+- You can also loop through the tuple items by referring to their index number. Use the range() and len() functions to create a suitable iterable.
+- You can loop through the tuple items by using a while loop.Use the len() function to determine the length of the tuple, then start at 0 and loop your way through the tuple items by referring to their indexes. Remember to increase the index by 1 after each iteration.
+
+### Join the tuples
+- To join two or more tuples you can use the + operator.
+- If you want to multiply the content of a tuple a given number of times, you can use the * operator
+
+### Tuple Methods
+- Python has two built-in methods that you can use on tuples.
+    - count(): Returns the number of times a specified value occurs in a tuple
+    - index(): Searches the tuple for a specified value and returns the position of where it was found
