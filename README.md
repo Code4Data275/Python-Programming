@@ -460,3 +460,94 @@ You can convert from one type to another with the int(), float(), and complex() 
 - Python has two built-in methods that you can use on tuples.
     - count(): Returns the number of times a specified value occurs in a tuple
     - index(): Searches the tuple for a specified value and returns the position of where it was found
+
+## Python Sets
+- Sets are used to store multiple items in a single variable.
+- A set is a collection which is unordered, unchangeable*, and unindexed.
+- Set items are unchangeable, but you can remove items and add new items.
+- Sets are written with curly brackets.
+- Sets are unordered, so you cannot be sure in which order the items will appear.
+- Set items are unordered, unchangeable, and do not allow duplicate values.
+- Unordered means that the items in a set do not have a defined order.
+- Set items can appear in a different order every time you use them, and cannot be referred to by index or key.
+- Set items are unchangeable, meaning that we cannot change the items after the set has been created.
+- Once a set is created, you cannot change its items, but you can remove items and add new items.
+- Sets cannot have two items with the same value.
+- The values True and 1 are considered the same value in sets, and are treated as duplicates
+- The values False and 0 are considered the same value in sets, and are treated as duplicates
+- To determine how many items a set has, use the len() function.
+- Set items can be of any data type
+- A set can contain different data types
+- From Python's perspective, sets are defined as objects with the data type 'set'
+- It is also possible to use the set() constructor to make a set.
+
+### Access Items
+- You cannot access items in a set by referring to an index or a key.
+- But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in keyword.
+
+### Add Set Items
+- Once a set is created, you cannot change its items, but you can add new items.
+- To add one item to a set use the add() method.
+- To add items from another set into the current set, use the update() method.
+- The object in the update() method does not have to be a set, it can be any iterable object (tuples, lists, dictionaries etc.).
+
+### Remove Set Items
+- To remove an item in a set, use the remove(), or the discard() method.
+- If the item to remove does not exist, remove() will raise an error.
+- If the item to remove does not exist, discard() will NOT raise an error.
+- You can also use the pop() method to remove an item, but this method will remove a random item, so you cannot be sure what item that gets removed. The return value of the pop() method is the removed item.
+- Sets are unordered, so when using the pop() method, you do not know which item that gets removed.
+- The clear() method empties the set.
+- The del keyword will delete the set completely:
+
+### Loop sets
+- You can loop through the set items by using a for loop.
+
+### Join sets
+- There are several ways to join two or more sets in Python.:
+    - The union() and update() methods joins all items from both sets.
+    - The intersection() method keeps ONLY the duplicates.
+    - The difference() method keeps the items from the first set that are not in the other set(s).
+    - The symmetric_difference() method keeps all items EXCEPT the duplicates.
+1. Union
+    - The union() method returns a new set with all items from both sets.
+    - You can use the | operator instead of the union() method, and you will get the same result.
+    - All the joining methods and operators can be used to join multiple sets.
+    - When using a method, just add more sets in the parentheses, separated by commas
+    - When using the | operator, separate the sets with more | operators
+    - The union() method allows you to join a set with other data types, like lists or tuples. The result will be a set.
+    - The  | operator only allows you to join sets with sets, and not with other data types like you can with the  union() method.
+    - The update() method inserts all items from one set into another.
+    - The update() changes the original set, and does not return a new set.
+    - Both union() and update() will exclude any duplicate items.
+2. Intersection
+    - Keep ONLY the duplicates
+    - The intersection() method will return a new set, that only contains the items that are present in both sets.
+    - You can use the & operator instead of the intersection() method, and you will get the same result.
+    - The & operator only allows you to join sets with sets, and not with other data types like you can with the intersection() method.
+    - The intersection_update() method will also keep ONLY the duplicates, but it will change the original set instead of returning a new set.
+    - The values True and 1 are considered the same value. The same goes for False and 0.
+3. Difference
+    - The difference() method will return a new set that will contain only the items from the first set that are not present in the other set.
+    - You can use the - operator instead of the difference() method, and you will get the same result.
+    - The - operator only allows you to join sets with sets, and not with other data types like you can with the difference() method.
+    - The difference_update() method will keep the items from the first set that are not in the other set, but it will change the original set instead of returning a new set.
+    - The symmetric_difference() method will keep only the elements that are NOT present in both sets.
+    - You can use the ^ operator instead of the symmetric_difference() method, and you will get the same result.
+    -  The ^ operator only allows you to join sets with sets, and not with other data types like you can with the symmetric_difference() method.
+    - The symmetric_difference_update() method will also keep all but the duplicates, but it will change the original set instead of returning a new set.
+
+### Frozen Sets
+- frozenset is an immutable version of a set.
+- Like sets, it contains unique, unordered, unchangeable elements.
+- Unlike sets, elements cannot be added or removed from a frozenset.
+- Use the frozenset() constructor to create a frozenset from any iterable.
+- Being immutable means you cannot add or remove elements. However, frozensets support all non-mutating operations of sets.
+    - copy() => Returns a shallow copy
+    - difference() - => Returns a new frozenset with the difference
+    - intersection() & => Returns a new frozenset with the intersection
+    - isdisjoint() => Returns True if there is NO intersection between two frozensets
+    - issubset() => Returns True if this frozenset is a (proper) subset of another
+    - issuperset() => Returns True if this frozenset is a (proper) superset of another
+    - symmetric_difference() => Returns a new frozenset with the symmetric differences
+    - union() => Returns a new frozenset containing the union 
